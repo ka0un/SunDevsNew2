@@ -16,7 +16,7 @@ export function SundevsHero() {
       {/* Video Background */}
       <div className="absolute inset-0 z-0">
         {/* Gradient background as fallback */}
-        <div className="absolute inset-0 bg-gradient-to-br from-primary via-orange-600 to-amber-700"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900"></div>
         {/* Optional: Video element can be added here */}
         {/* <video className="w-full h-full object-cover" autoPlay loop muted playsInline>
           <source src="/videos/hero-bg.mp4" type="video/mp4" />

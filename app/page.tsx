@@ -1,6 +1,7 @@
 import {
   SundevsNavbar,
   SundevsHero,
+  SundevsAbout,
   SundevsProducts,
   SundevsTestimonials,
   SundevsContact,
@@ -15,6 +16,7 @@ export default function Home() {
       <ScrollProgressBar />
       <SundevsNavbar />
       <SundevsHero />
+      <SundevsAbout />
       <SundevsProducts />
       <SundevsTestimonials />
       <SundevsContact />

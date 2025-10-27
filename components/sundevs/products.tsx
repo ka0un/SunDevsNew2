@@ -45,71 +45,74 @@ function ProductCard({
   comingSoon = false,
 }: ProductCardProps) {
   return (
-    <div className="bg-white dark:bg-card rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-      {/* Header */}
-      <div className="flex items-start justify-between mb-4">
-        <div className="flex items-center gap-4">
-          <div className="relative w-16 h-16 rounded-lg overflow-hidden bg-gradient-to-br from-primary to-orange-600">
-            <Image
-              src={image}
-              alt={name}
-              fill
-              className="object-cover"
-            />
-          </div>
-          <div>
-            <h3 className="text-xl font-bold text-foreground">{name}</h3>
-            <p className="text-lg font-semibold text-primary">{price}</p>
-          </div>
-        </div>
-        {customerCount && (
-          <div className="text-right">
-            <div className="text-2xl font-bold text-primary">{customerCount}+</div>
-            <div className="text-sm text-muted-foreground">Happy Customers</div>
-          </div>
-        )}
+    <div className="bg-white dark:bg-card rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+      {/* Product Image */}
+      <div className="relative w-full h-48 bg-gradient-to-br from-muted to-muted/50">
+        <Image
+          src={image}
+          alt={name}
+          fill
+          className="object-cover"
+        />
       </div>
 
-      {/* Description */}
-      <p className="text-muted-foreground mb-4">{description}</p>
-
-      {/* Features Grid */}
-      {!comingSoon && features.length > 0 && (
-        <div className="grid grid-cols-2 gap-3 mb-4">
-          {features.map((feature, idx) => (
-            <div
-              key={idx}
-              className="flex items-center gap-2 text-sm text-foreground bg-muted/50 rounded-lg p-2"
-            >
-              <div className="text-primary">{feature.icon}</div>
-              <span className="font-medium">{feature.label}</span>
+      {/* Content */}
+      <div className="p-6">
+        {/* Header */}
+        <div className="flex items-start justify-between mb-4">
+          <div>
+            <h3 className="text-2xl font-bold text-foreground">{name}</h3>
+            <p className="text-xl font-semibold text-primary mt-1">{price}</p>
+          </div>
+          {customerCount && (
+            <div className="text-right">
+              <div className="text-2xl font-bold text-primary">{customerCount}+</div>
+              <div className="text-sm text-muted-foreground">Happy Customers</div>
             </div>
-          ))}
+          )}
         </div>
-      )}
 
-      {/* Actions */}
-      <div className="flex gap-3 mt-4">
-        {comingSoon ? (
-          <Button disabled className="flex-1 bg-muted text-muted-foreground">
-            Available Soon
-          </Button>
-        ) : (
-          <>
-            <Button asChild className="flex-1 bg-primary hover:bg-primary/90">
-              <a href={purchaseLink} target="_blank" rel="noopener noreferrer">
-                Purchase Now
-              </a>
+        {/* Description */}
+        <p className="text-muted-foreground mb-4">{description}</p>
+
+        {/* Features Grid */}
+        {!comingSoon && features.length > 0 && (
+          <div className="grid grid-cols-2 gap-3 mb-4">
+            {features.map((feature, idx) => (
+              <div
+                key={idx}
+                className="flex items-center gap-2 text-sm text-foreground bg-muted/50 rounded-lg p-2"
+              >
+                <div className="text-primary">{feature.icon}</div>
+                <span className="font-medium">{feature.label}</span>
+              </div>
+            ))}
+          </div>
+        )}
+
+        {/* Actions */}
+        <div className="flex gap-3 mt-4">
+          {comingSoon ? (
+            <Button disabled className="flex-1 bg-muted text-muted-foreground">
+              Available Soon
             </Button>
-            {demoLink && (
-              <Button asChild variant="outline" className="flex-1">
-                <a href={demoLink} target="_blank" rel="noopener noreferrer">
-                  Learn More
+          ) : (
+            <>
+              <Button asChild className="flex-1 bg-primary hover:bg-primary/90">
+                <a href={purchaseLink} target="_blank" rel="noopener noreferrer">
+                  Purchase Now
                 </a>
               </Button>
-            )}
-          </>
-        )}
+              {demoLink && (
+                <Button asChild variant="outline" className="flex-1">
+                  <a href={demoLink} target="_blank" rel="noopener noreferrer">
+                    Learn More
+                  </a>
+                </Button>
+              )}
+            </>
+          )}
+        </div>
       </div>
     </div>
   );
@@ -152,36 +155,6 @@ export function SundevsProducts() {
       ],
       purchaseLink: "https://builtbybit.com/resources/sunguard.33819/",
     },
-    {
-      name: "SunLy",
-      price: "Coming Soon",
-      image: "/images/SunLy.svg",
-      description:
-        "Self-hosted URL shortening platform with advanced analytics and security.",
-      features: [],
-      purchaseLink: "#",
-      comingSoon: true,
-    },
-    {
-      name: "SunDrive",
-      price: "Coming Soon",
-      image: "/images/SunDrive.svg",
-      description:
-        "Secure file sharing platform with enterprise-grade encryption and controls.",
-      features: [],
-      purchaseLink: "#",
-      comingSoon: true,
-    },
-    {
-      name: "SunCore",
-      price: "Coming Soon",
-      image: "/images/SunCore.svg",
-      description:
-        "Java-based development template with Discord integration and web dashboard.",
-      features: [],
-      purchaseLink: "#",
-      comingSoon: true,
-    },
   ];
 
   return (
@@ -197,7 +170,7 @@ export function SundevsProducts() {
         </div>
 
         {/* Bento Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl mx-auto">
           {products.map((product, idx) => (
             <ProductCard key={idx} {...product} />
           ))}

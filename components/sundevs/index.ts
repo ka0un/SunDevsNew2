@@ -1,5 +1,6 @@
 export { SundevsNavbar } from "./navbar";
 export { SundevsHero } from "./hero";
+export { SundevsAbout } from "./about";
 export { SundevsProducts } from "./products";
 export { SundevsTestimonials } from "./testimonials";
 export { SundevsContact } from "./contact";
