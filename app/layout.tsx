@@ -3,6 +3,7 @@ import "./globals.css";
 import { ThemeProvider } from "next-themes";
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://sundevs.com'),
   title: "Sundevs - Your Trusted Software Product Company",
   description:
     "Empowering Businesses with Innovative Software Solutions. Enterprise-grade software solutions including SunLicense, SunGuard, and more.",
