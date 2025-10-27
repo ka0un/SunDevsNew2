@@ -50,6 +50,15 @@ npm run dev
 
 5. Open [http://localhost:3000](http://localhost:3000) in your browser to see the result.
 
+## Template route (/template)
+
+- A full copy of the landing page exists at `/template` for reference while you customize the root page.
+- Files live under `app/template/` and include a dedicated `layout.tsx`, `page.tsx`, and duplicated section components in `app/template/components/`.
+- The navbar and a theme toggle are also duplicated under `app/template/components/navbar/` and `app/template/components/theme-toggle.tsx` so the template is decoupled from root components.
+- The template navbar links point to anchors on the template page and "Home" points to `/template`.
+
+You can freely modify either the root landing (`/`) or the template (`/template`) without interfering with each other.
+
 ## Customization
 
 1. Replace the placeholder images with your own content.
