@@ -1,53 +1,48 @@
 import type { Metadata } from "next";
-import { Geist } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "next-themes";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
 export const metadata: Metadata = {
-  title: "Beautiful Shadcn UI Landing Page",
+  title: "Sundevs - Your Trusted Software Product Company",
   description:
-    "A beautiful landing page built with Shadcn UI, Next.js 15, Tailwind CSS, and Shadcn UI Blocks.",
+    "Empowering Businesses with Innovative Software Solutions. Enterprise-grade software solutions including SunLicense, SunGuard, and more.",
   keywords: [
-    "Shadcn UI Landing Page",
-    "Shadcn UI Blocks",
-    "Shadcn UI",
-    "Landing Page",
-    "Tailwind CSS Landing Page",
-    "Beautiful Shadcn UI Landing Page",
-    "Next.js 15 Landing Page",
-    "Simple Landing Page",
-    "Landing Page Template",
-    "Landing Page Design",
+    "Sundevs",
+    "Software Product Company",
+    "SunLicense",
+    "SunGuard",
+    "License Management",
+    "Code Obfuscation",
+    "Java Development",
+    "Minecraft Plugins",
+    "Software Protection",
+    "Enterprise Software",
+    "Sri Lanka Software Company",
   ],
   openGraph: {
     type: "website",
-    siteName: "Shadcn Landing Page",
+    siteName: "Sundevs",
     locale: "en_US",
-    url: "https://shadcn-landing-page.vercel.app",
-    title: "Shadcn Landing Page",
+    url: "https://sundevs.com",
+    title: "Sundevs - Your Trusted Software Product Company",
     description:
-      "A beautiful landing page built with Shadcn UI, Next.js 15, Tailwind CSS, and Shadcn UI Blocks.",
+      "Empowering Businesses with Innovative Software Solutions. Enterprise-grade software solutions including SunLicense, SunGuard, and more.",
     images: [
       {
-        url: "/og-image.jpg",
+        url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Shadcn UI Landing Page Preview",
+        alt: "Sundevs - Your Trusted Software Product Company",
       },
     ],
   },
   authors: [
     {
-      name: "Akash Moradiya",
-      url: "https://shadcnui-blocks.com",
+      name: "Sundevs PVT LTD",
+      url: "https://sundevs.com",
     },
   ],
-  creator: "Akash Moradiya",
+  creator: "Sundevs PVT LTD",
   icons: [
     {
       rel: "icon",
@@ -96,7 +91,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${geistSans.className} antialiased`}>
+      <body className="font-sans antialiased">
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           {children}
         </ThemeProvider>
